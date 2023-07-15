@@ -1,4 +1,5 @@
 // import serverContext from 'server-only-context';
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../Images/logo.png";
@@ -17,16 +18,23 @@ import ProduckCard from "@/components/ProduckCard";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
 import ownerbio from '../Images/owner.png';
 import bg_owner from '../Images/bgcolor.jpg';
+import { useState } from "react";
 export default function Home() {
-  // const [isOpen, setIsOpen] = serverContext(false);
-
-  // const handleClick = () => {
-  //   setIsOpen(!isOpen);
-  // };
-
+  const [isOpen, setIsOpen] = useState(false);
+  const handleHamburgerClick = () => {
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+      link.classList.toggle("fade");
+    });
+    const hamburger = document.querySelector(".hamburger");
+    hamburger.classList.toggle("toggle");
+  };
   return (
     <>
-    <div className="top-header flex flex-wrap justify-between p-4 bg-[#021a47] text-white">
+    <div className="top-header  bg-[#021a47] text-white">
+    <div class="container mx-auto p-4 flex flex-wrap justify-between ">
       <div className="flex flex-wrap gap-4">
       <p>Gray Iron and SG Iron casting foundry in India</p>
       <p><CallIcon/> +91 8336906400 | +91 9830057740</p>
@@ -39,7 +47,7 @@ export default function Home() {
       <div className="search-icon">
       <p><MailIcon/>enquiry@kiswok.com</p>
       </div>
-      
+      </div>
 
     </div>
       <div class="container mx-auto py-4  ">
@@ -55,7 +63,7 @@ export default function Home() {
               K <span className="text-[15px] text-[white]">ISWORK</span>
             </p>
           </div>
-          <div className="hamburger" onClick={"handleClick"}>
+          <div className="hamburger" onClick={handleHamburgerClick}>
             <div className="line1" />
             <div className="line2" />
             <div className="line3" />
@@ -190,13 +198,13 @@ export default function Home() {
         </div>
       </div>
       </div>
-        
-        <div className="owner-bio flex flex-wrap justify-evenly p-12" style={{
-            backgroundImage: `url(${bg_owner.src})`,
+        <div className="owner-bio " style={{
+          backgroundImage: `url(${bg_owner.src})`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-        }}>
+          }}>
+          <div class="container mx-auto py-4 flex flex-wrap justify-evenly ">
           <Image src={ownerbio} width={300} height={300} alt="bio" className="m-[auto]"/>
           <div className="text-bio w-[40%] h-[30%] m-[auto]" >
             <p>IN THE LOVING MEMORY OF...</p>
@@ -204,6 +212,7 @@ export default function Home() {
             <p className="text-white">You taught us the meaning of perfection and perseverance. You taught us the virtues which guide us through the darkness, help us strive for the best and make us better human beings, every single day.</p>
             <p className="text-white">We promise to embody your values and live up to your legacy for the rest of our days. You will, forever, rest in the core of our hearts.</p>
           </div>
+        </div>
         </div>
 
     </>
