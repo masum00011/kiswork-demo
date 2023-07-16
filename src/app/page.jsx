@@ -1,31 +1,34 @@
-// import serverContext from 'server-only-context';
-'use client';
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../Images/logo.png";
-import locationping from '../Images/GLOBAL.gif';
+import locationping from "../Images/GLOBAL.gif";
 import Imageslider from "@/components/Imageslider";
 import { Button, TextField } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import CallIcon from '@mui/icons-material/Call';
-import MailIcon from '@mui/icons-material/Mail';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import SearchIcon from '@mui/icons-material/Search';
-import DoneIcon from '@mui/icons-material/Done';
+import CallIcon from "@mui/icons-material/Call";
+import MailIcon from "@mui/icons-material/Mail";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import SearchIcon from "@mui/icons-material/Search";
+import DoneIcon from "@mui/icons-material/Done";
 import ProduckCard from "@/components/ProduckCard";
 import YoutubeEmbed from "@/components/YoutubeEmbed";
-import ownerbio from '../Images/owner.png';
-import bg_owner from '../Images/bgcolor.jpg';
+import ownerbio from "../Images/owner.png";
+import bg_owner from "../Images/bgcolor.jpg";
 import { useState } from "react";
+import Biocard from "@/components/Biocard";
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
+import NumberEmp from "@/components/NumberEmp";
+import Hovercontaner from "@/components/Hovercontaner";
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const handleHamburgerClick = () => {
     const navLinks = document.querySelector(".nav-links");
     const links = document.querySelectorAll(".nav-links li");
     navLinks.classList.toggle("open");
-    links.forEach(link => {
+    links.forEach((link) => {
       link.classList.toggle("fade");
     });
     const hamburger = document.querySelector(".hamburger");
@@ -33,23 +36,26 @@ export default function Home() {
   };
   return (
     <>
-    <div className="top-header  bg-[#021a47] text-white">
-    <div class="container mx-auto p-4 flex flex-wrap justify-between ">
-      <div className="flex flex-wrap gap-4">
-      <p>Gray Iron and SG Iron casting foundry in India</p>
-      <p><CallIcon/> +91 8336906400 | +91 9830057740</p>
-      <p><MailIcon/>enquiry@kiswok.com</p>
-      </div>
-        {/* <FacebookIcon/>
+      <div className="top-header  bg-[#021a47] text-white">
+        <div class="container mx-auto p-4 flex flex-wrap justify-between ">
+          <div className="flex flex-wrap gap-4">
+            <p>Gray Iron and SG Iron casting foundry in India</p>
+            <p>
+              <CallIcon /> +91 8336906400 | +91 9830057740
+            </p>
+            <p>
+              <MailIcon />
+              enquiry@kiswok.com
+            </p>
+          </div>
+          <div className="search-icon flex gap-4">
+          <FacebookIcon/>
         <LinkedInIcon/>
         <YouTubeIcon/>
-        <SearchIcon/> */}
-      <div className="search-icon">
-      <p><MailIcon/>enquiry@kiswok.com</p>
+        <SearchIcon/>
+          </div>
+        </div>
       </div>
-      </div>
-
-    </div>
       <div class="container mx-auto py-4  ">
         <Image src={logo} alt="Logo Image" />
       </div>
@@ -74,6 +80,17 @@ export default function Home() {
             </li>
             <li>
               <a href="#">About</a>
+              <ul class="dropdown">
+                <li>
+                  <a href="#">Sub-1</a>
+                </li>
+                <li>
+                  <a href="#">Sub-2</a>
+                </li>
+                <li>
+                  <a href="#">Sub-3</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#">Products</a>
@@ -129,7 +146,9 @@ export default function Home() {
                         size="small"
                       />
                     </div>
-                      <a href="" className=" normal-case">Forget Password</a>
+                    <a href="" className=" normal-case">
+                      Forget Password
+                    </a>
                     <div className="btn-login w-[70%] m-[auto]">
                       <button className="btn btn-active btn-primary my-8 w-[100%]">
                         sign in
@@ -149,11 +168,10 @@ export default function Home() {
           <div className="text-content w-[45%] h-[20rem%] m-[auto]">
             <b className="text-[#d6d9df]">About Us</b>
             <div className="bold-text font-bold text-3xl py-4">
-
-            <p >WELCOME TO</p>
-            <b>Kiswok Industries</b>
+              <p>WELCOME TO</p>
+              <b>Kiswok Industries</b>
             </div>
-            <hr  className="pb-4"/>
+            <hr className="pb-4" />
             <p>
               Kiswok industries is one of the Gray Iron and SG Iron casting
               foundry based in India since 1957. Kiswok has conferred
@@ -163,57 +181,136 @@ export default function Home() {
             </p>
           </div>
           <div className="img-location-img h-[100%]">
-            <Image src={locationping} alt="location"/>
+            <Image src={locationping} alt="location" />
           </div>
         </div>
 
-      <div className="card-section ">
-        <p className="py-20 font-bold text-3xl text-center">India's Leading Manufacturer of Automotive, Industrial, Railway, Agricultural and Municipal Castings Since 1957.</p>
-        <div className="card-content flex flex-wrap gap-4 justify-evenly">
-          <ProduckCard/>
-          <ProduckCard/>
-          <ProduckCard/>
-          <ProduckCard/>
-          <ProduckCard/>
-          <ProduckCard/>
-          <ProduckCard/>
+        <div className="card-section ">
+          <p className="py-20 font-bold text-3xl text-center">
+            India's Leading Manufacturer of Automotive, Industrial, Railway,
+            Agricultural and Municipal Castings Since 1957.
+          </p>
+          <div className="card-content flex flex-wrap gap-4 justify-evenly">
+            <ProduckCard />
+            <ProduckCard />
+            <ProduckCard />
+            <ProduckCard />
+            <ProduckCard />
+            <ProduckCard />
+            <ProduckCard />
+          </div>
         </div>
-      </div>
 
-      <div className="video-section flex flex-wrap justify-evenly my-8">
-        <div className="video-content w-[45%]">
-        <YoutubeEmbed embedId="rokGy0huYEA" />
-        </div>
-        <div className="text-content w-[45%]">
-          <p className="text-2xl pt-8">Kiswok <span className="font-bold"> At A Glance</span> </p>
-          <hr className="pb-4" />
-          <p><DoneIcon/> <span>Production Capacity 1,08,000 MT Per Annum</span> </p>
-          <p><DoneIcon/> <span>An ISO 9001: 2015 & IATF 16949:2016 Company</span> </p>
-          <p><DoneIcon/> <span>Bronze Category IRIS Certified Company</span> </p>
-          <p><DoneIcon/> <span>NABL Accredited Laboratory both in the field Chemical & Mechanical</span> </p>
-          <p><DoneIcon/> <span>Export based in World wide</span> </p>
-          <p><DoneIcon/> <span>Globally Customer satisfaction</span> </p>
-          <p><DoneIcon/> <span>Time bound delivery and quality consistency</span> </p>
-          <p><DoneIcon/> <span>Achieving global customer quality standard with time bound delivery at a competitive price</span> </p>
+        <div className="video-section flex flex-wrap justify-evenly my-8">
+          <div className="video-content w-[45%]">
+            <YoutubeEmbed embedId="rokGy0huYEA" />
+          </div>
+          <div className="text-content w-[45%]">
+            <p className="text-2xl pt-8">
+              Kiswok <span className="font-bold"> At A Glance</span>{" "}
+            </p>
+            <hr className="pb-4" />
+            <p>
+              <DoneIcon />{" "}
+              <span>Production Capacity 1,08,000 MT Per Annum</span>{" "}
+            </p>
+            <p>
+              <DoneIcon />{" "}
+              <span>An ISO 9001: 2015 & IATF 16949:2016 Company</span>{" "}
+            </p>
+            <p>
+              <DoneIcon /> <span>Bronze Category IRIS Certified Company</span>{" "}
+            </p>
+            <p>
+              <DoneIcon />{" "}
+              <span>
+                NABL Accredited Laboratory both in the field Chemical &
+                Mechanical
+              </span>{" "}
+            </p>
+            <p>
+              <DoneIcon /> <span>Export based in World wide</span>{" "}
+            </p>
+            <p>
+              <DoneIcon /> <span>Globally Customer satisfaction</span>{" "}
+            </p>
+            <p>
+              <DoneIcon />{" "}
+              <span>Time bound delivery and quality consistency</span>{" "}
+            </p>
+            <p>
+              <DoneIcon />{" "}
+              <span>
+                Achieving global customer quality standard with time bound
+                delivery at a competitive price
+              </span>{" "}
+            </p>
+          </div>
         </div>
       </div>
-      </div>
-        <div className="owner-bio " style={{
+      <div
+        className="owner-bio "
+        style={{
           backgroundImage: `url(${bg_owner.src})`,
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}>
-          <div class="container mx-auto py-4 flex flex-wrap justify-evenly ">
-          <Image src={ownerbio} width={300} height={300} alt="bio" className="m-[auto]"/>
-          <div className="text-bio w-[40%] h-[30%] m-[auto]" >
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div class="container mx-auto py-4 flex flex-wrap justify-evenly ">
+          <Image
+            src={ownerbio}
+            width={300}
+            height={300}
+            alt="bio"
+            className="m-[auto]"
+          />
+          <div className="text-bio w-[40%] h-[30%] m-[auto]">
             <p>IN THE LOVING MEMORY OF...</p>
             <p>Lt. Shri S. S. Kejriwal</p>
-            <p className="text-white">You taught us the meaning of perfection and perseverance. You taught us the virtues which guide us through the darkness, help us strive for the best and make us better human beings, every single day.</p>
-            <p className="text-white">We promise to embody your values and live up to your legacy for the rest of our days. You will, forever, rest in the core of our hearts.</p>
+            <p className="text-white">
+              You taught us the meaning of perfection and perseverance. You
+              taught us the virtues which guide us through the darkness, help us
+              strive for the best and make us better human beings, every single
+              day.
+            </p>
+            <p className="text-white">
+              We promise to embody your values and live up to your legacy for
+              the rest of our days. You will, forever, rest in the core of our
+              hearts.
+            </p>
           </div>
         </div>
+      </div>
+      <div className="container mx-auto py-4">
+        <Biocard />
+      <div className="number-of-spaker-work text-center pt-28">
+        <p>NUMBER</p>
+       <h1 className="text-4xl"><span className="font-bold">Numbers</span> Speak For Kiswok.</h1>
+       <HorizontalRuleIcon/>
+      </div>
+        <div className="flex flex-wrap justify-between px-8 gap-12">
+
+        <NumberEmp/>
+        <NumberEmp/>
+        <NumberEmp/>
+        <NumberEmp/>
         </div>
+        </div>
+        <div className="card-hover-effect py-32" style={{
+           backgroundImage: `url(${bg_owner.src})`,
+           backgroundPosition: "center",
+           backgroundRepeat: "no-repeat",
+           backgroundSize: "cover",
+        }}>
+          <div className="flex flex-wrap justify-between px-12">
+        <Hovercontaner/>
+        <Hovercontaner/>
+        <Hovercontaner/>
+          </div>
+        </div>
+
+
 
     </>
   );
