@@ -49,6 +49,7 @@ export default function Home() {
             </p>
           </div>
           <div className="search-icon flex gap-4">
+          <Link href="/doc">Doc</Link>
           <FacebookIcon/>
         <LinkedInIcon/>
         <YouTubeIcon/>
