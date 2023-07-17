@@ -304,13 +304,95 @@ export default function Home() {
            backgroundSize: "cover",
         }}>
           <div className="flex flex-wrap justify-between px-12">
-        <Hovercontaner/>
-        <Hovercontaner/>
-        <Hovercontaner/>
+        <Hovercontaner number='01' textcon='Modernized Foundry'/>
+        <Hovercontaner number='02' textcon='Modern Induction '/>
+        <Hovercontaner number='03' textcon='Product Ranges'/>
           </div>
         </div>
 
+        <div className="container mx-auto py-16">
+          <p className="text-[21px] py-4">Who <span className="font-bold">Trust us</span></p>
+          <HorizontalRuleIcon/>
+          <div className="image-section flex flex-wrap justify-between px-4">
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/tata.png" className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/DAIMLER.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/dana.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/eicher.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/isuzu.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/al.png" className="w-[10rem]" alt="brand" />
+          </div>
+          <div className="image-section flex flex-wrap justify-between px-4">
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/tata.png" className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/DAIMLER.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/dana.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/eicher.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/isuzu.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/al.png" className="w-[10rem]" alt="brand" />
+          </div>
+          <div className="image-section flex flex-wrap justify-between px-4">
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/tata.png" className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/DAIMLER.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/dana.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/eicher.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/isuzu.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/al.png" className="w-[10rem]" alt="brand" />
+          </div>
+          <div className="image-section flex flex-wrap justify-between px-4">
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/tata.png" className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/DAIMLER.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/dana.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/eicher.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/isuzu.png"className="w-[10rem]" alt="brand" />
+            <img src="https://www.kiswok.com/wp-content/uploads/2022/03/al.png" className="w-[10rem]" alt="brand" />
+          </div>
+        </div>
 
+        <div className="email-section bg-[#021a47] ">
+        <div className="container mx-auto py-12 text-white flex justify-between">
+          <div>
+          <p>NEWSLETTER</p>
+          <p className="text-3xl font-bold py-2">Stay <span className="font-normal">in Toch With Us</span></p>
+          </div>
+        <div className="search-btn">
+          <input type="email" className="py-2 px-4 text-black my-4 " placeholder="Your E-mail"  style={{outline:"none"}}/> <span className="bg-[#1b5ab3] py-2 px-4 pr-12 ml-[-6px]"  type='button'>SIGN IN UP</span>
+        </div>
+        </div>
+        </div>
+        <div className="container mx-auto py-12 flex gap-12">
+          <img src="https://www.kiswok.com/wp-content/uploads/2022/07/kiswok_logo_new.png" alt="" />
+          <p className="text-[24px]">
+We are the world class engineering manufacturer providing the highest quality products, services and solutions to our customers.</p>
+        </div>
+        <hr />
+        <div className="container mx-auto py-12 flex flex-wrap justify-between">
+          <div className="div1 w-[30%]">
+            <b className="text-[20px]">Machine Shop(Unit -I)</b>
+          <div className="machine-shop flex justify-between">
+            <p className="">62/1 Bhattanagar,<p>Liluah</p></p>
+            <p>Howrah 711203,<p>West Bengal, India</p></p>
+          </div>
+          </div>
+          <div className="div1 w-[30%]">
+            <b className="text-[20px]">Foundry (Unit II)</b>
+          <div className="machine-shop flex justify-between">
+            <p className="">62/1 Bhattanagar,<p>Liluah</p></p>
+            <p>Howrah 711203,<p>West Bengal, India</p></p>
+          </div>
+          </div>
+          <div className="div1 w-[30%]">
+            <b className="text-[20px]">Machine Shop(Unit - IV)</b>
+          <div className="machine-shop flex justify-between">
+            <p className="">62/1 Bhattanagar,<p>Liluah</p></p>
+            <p>Howrah 711203,<p>West Bengal, India</p></p>
+          </div>
+          </div>
+        </div>
+        <div className="footer-section bg-[#02112e]">
+          <div className="container mx-auto text-white flex justify-between flex-wrap py-6">
+          <p>Copyright © Kiswok Indiatries Pvt. Ltd. — All rights reserved. Design by Adnox</p>
+          <p>Jalan Industrial Complex, Gate No.1, Bipranna Para, Domjur, Howrah - 711411</p>
+          </div>
+        </div>
 
     </>
   );

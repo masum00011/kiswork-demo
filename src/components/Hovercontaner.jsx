@@ -1,22 +1,23 @@
 import React from "react";
 
-export default function Hovercontaner() {
+export default function Hovercontaner({number,textcon}) {
   return (
     <div>
       <div className="containermain">
         <div className="card">
-          <div className="image">
-            <img
-              href="#"
-              src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg"
-            />
+          <div className="image bg-[blue] py-12  text-center text-white ">
+            <div>
+
+            <b className="text-5xl">{number}</b>
+            </div>
+            <b className="text-4xl">{textcon}</b>
           </div>
           <div className="content">
             <h3>This is content</h3>
             <p>
-              DIn publishing and graphic design, Lorem ipsum is a placeholder
-              text commonly used to demonstrate the visual form of a document or
-              a typeface without relying on meaningful content.
+            Successfully commissioned the installation of Oritech Solutions induction furnace 2 sets of double track furnace (4 numbers with capacity 3.5 MT each) and two sets of single track furnace (2 numbers with capacity 2 MT each). The annual capacity of melting is 100800 MT.
+
+
             </p>
           </div>
         </div>
